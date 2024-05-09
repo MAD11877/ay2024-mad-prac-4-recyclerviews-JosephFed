@@ -33,26 +33,17 @@ public class ListActivity extends AppCompatActivity {
         });
 
         ArrayList<User> userList = new ArrayList<>();
-        userList.add(new User("Jay" + new Random().nextInt(999999999),"Jaegan",2,true));
-        userList.add(new User("Aaron" + new Random().nextInt(999999999),"Ang",3,false));
-        userList.add(new User("Baylee" + new Random().nextInt(999999999),"Boo",4,false));
-        userList.add(new User("Ceasar" + new Random().nextInt(999999999),"Cee",5,true));
-        userList.add(new User("Daniel" + new Random().nextInt(999999999),"Dan",6,true));
-        userList.add(new User("Emily" + new Random().nextInt(999999999),"EE",7,false));
-        userList.add(new User("Farah"+ new Random().nextInt(999999999),"Felia",8,true));
-        userList.add(new User("Gran" + new Random().nextInt(999999999),"Garden",9,true));
-        userList.add(new User("Hamilton" + new Random().nextInt(999999999),"Hills",10,true));
-        userList.add(new User("Issac" + new Random().nextInt(999999999),"Iko",11,false));
-        userList.add(new User("Kelvin" + new Random().nextInt(999999999),"Klee",12,true));
-        userList.add(new User("Larry" + new Random().nextInt(999999999),"Law",13,false));
-        userList.add(new User("Megan" + new Random().nextInt(999999999),"Manny",14,true));
-        userList.add(new User("Nolan" + new Random().nextInt(999999999),"Nish",15,false));
-        userList.add(new User("Oliver" + new Random().nextInt(999999999),"Ollie",16,true));
-        userList.add(new User("Patrick" + new Random().nextInt(999999999),"Power",17,false));
-        userList.add(new User("Quinn" + new Random().nextInt(999999999),"Quill",18,false));
-        userList.add(new User("Russo" + new Random().nextInt(999999999),"Rock",19,true));
-        userList.add(new User("Sage" + new Random().nextInt(999999999),"San",20,true));
-        userList.add(new User("Taylor" + new Random().nextInt(999999999),"Twist",21,false));
+        for (int i = 0; i<20; i++){
+            int name = new Random().nextInt(999999999);
+            int description = new Random().nextInt(999999999);
+            boolean followed = new Random().nextBoolean();
+
+            User user = new User("John Doe","MAD Developer", 1, false);
+            user.setName("Name" + String.valueOf(name));
+            user.setDescription("Description" + String.valueOf(description));
+            user.setFollowed(followed);
+            userList.add(user);
+        }
 
         //Creating recycler view
         UserAdapter userAdapter = new UserAdapter(userList);
