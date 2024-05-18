@@ -8,7 +8,7 @@ android {
 
     defaultConfig {
         applicationId = "sg.edu.np.mad.madpractical4"
-        minSdk = 21
+        minSdk = 24
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
