@@ -9,10 +9,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 public class UserAdapter extends RecyclerView.Adapter<UserViewHolder> {
+    private final ListActivity activity;
     private ArrayList<User> list_objects;
-    public UserAdapter(ArrayList<User> list_object){
+    public UserAdapter(ArrayList  <User> list_object, ListActivity activity){
         this.list_objects = list_object;
-        //this.activity = activity
+        this.activity = activity;
     }
 
     //Method to create a view holder for a username
